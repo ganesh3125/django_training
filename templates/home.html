@@ -1,0 +1,15 @@
+{% extends 'base/layout.html' %}
+{% load static %}
+
+{% block content %}
+
+<img src="{% static "img/SIT_logo.png" alt=" photo" %}" >
+
+<ul>
+    {% for i in 'hello' %}
+    <li>{{ i }}</li>
+
+    {% endfor %}
+</ul>
+
+{% endblock %}

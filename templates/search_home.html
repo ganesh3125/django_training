@@ -1,0 +1,17 @@
+{% extends 'base/layout.html' %}
+{% load static %}
+{% block content %}
+<div class ="container">
+        <form action="" method="POST" class="mt.4">
+            {% csrf_token %}{{form.as_p}}
+            <input type="submit" value="search" class="bin btn-info">
+        </form>
+</div>
+
+{% if result  %}
+{% for r in result %}
+{{ r.student_name }}
+{% endfor %}
+{% endif %}
+
+{% endblock %}
